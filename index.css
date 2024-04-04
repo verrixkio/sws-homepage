@@ -5,7 +5,25 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-.container,
+
+ /* SwS */
+ body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.block-1 .start-with-self-text {
+  width: 300px;
+}
+
+
+/*Base, Alteria, Prototype*/
+
+
+ .container,
 .container-fluid,
 .container-sm,
 .container-md,
@@ -5653,8 +5671,8 @@ h5 {
   }
 
   .logo-container img {
-    max-width: 100px;
-    max-height: 50px;
+    max-width: 30%;
+    max-height: 80px;
   }
 
   .menu-container {
