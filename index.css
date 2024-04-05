@@ -16,7 +16,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block-1 .start-with-self-text {
-  width: 300px;
+  width: 60%;
+}
+
+.font-color-teal {
+  color: #53c1bd;
 }
 
 
@@ -5605,7 +5609,7 @@ h5 {
 /* For Desktop */
 .logo-link img {
   max-width: 200px;
-  max-height: 66px;
+  max-height: 40px;
 }
 
 .bar {
