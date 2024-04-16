@@ -23,6 +23,78 @@ h1, h2, h3, h4, h5, h6 {
   color: #53c1bd;
 }
 
+/* Base Styles */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black; /* default color */
+  color: white;
+  border-radius: 3px;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: background-opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 80%;
+}
+
+.button:disabled {
+  opacity: 40%;
+  cursor: not-allowed;
+}
+
+/* Size Variants */
+.button-sm {
+  padding: 8px 0px;
+  font-size: 0.875rem; /* 14px */
+}
+
+.button-md {
+  padding: 10px 16px;
+  font-size: 1rem; /* 16px */
+}
+
+.button-lg {
+  padding: 12px 20px;
+  font-size: 1.125rem; /* 18px */
+}
+
+/* Color Variants */
+.button-black {
+  background-color: black;
+  box-shadow: -5px 4px 0 0 #a4aaa7;
+}
+
+.button-flat-black {
+  background-color: black;
+}
+
+.button-blue {
+  background-color: #41aee6;
+  box-shadow: -5px 4px 0 0 #5ec1f2;
+}
+
+.button-green {
+  background-color: #5EC481;
+  box-shadow: -5px 4px 0 0 lightgreen;
+}
+
+.button-flat-green {
+  background-color: green;
+}
+
+.button-darkgreen {
+  background-color: darkgreen;
+  box-shadow: -5px 4px 0 0 lightgreen;
+}
+
+.icon-right-arrow {
+  margin-left: 8px; /* space between the icon and text */
+  vertical-align: middle; /* align the icon vertically with the text */
+}
+
 
 /*Base, Alteria, Prototype*/
 
@@ -5607,9 +5679,14 @@ h5 {
 
 
 /* For Desktop */
+
+.mobile-view {
+  display: none;
+}
+
 .logo-link img {
   max-width: 200px;
-  max-height: 40px;
+  max-height: 35px;
 }
 
 .bar {
@@ -5673,6 +5750,16 @@ h5 {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .desktop {
+    display: none;
+  }
+
+  /* SWS */
+  .block-1 .start-with-self-text {
+    width: 40%;
+  }
+  /* End SWS */
 
   .logo-container img {
     max-width: 30%;
@@ -5802,6 +5889,9 @@ h5 {
 @media (min-width: 768px) {
   .image {
     max-width: 180px; /* Larger size on bigger screens */
+  }
+  .mobile {
+    display: none;
   }
 }
 
