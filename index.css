@@ -5778,6 +5778,14 @@ h5 {
   .mobile .start-with-self-ocean {
     transform: scale(1.5) translateX(-10%) translateY(25%);
   }
+
+  .mobile .start-with-self-ocean-island {
+    transform: translateY(25%);
+  }
+
+  .mobile .start-with-self-mood-analytics {
+    transform: scale(1.5) translateX(-10%) translateY(25%);
+  }
 }
 
 .ourProcessContainer {
