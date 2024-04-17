@@ -5099,12 +5099,12 @@ h4 {
       letter-spacing: -0.4px; } }
   @media (max-width: 768px) {
     h4 {
-      font-size: 24px;
+      font-size: 22px;
       line-height: 28px;
       letter-spacing: -0.2px; } }
   @media (max-width: 576px) {
     h4 {
-      font-size: 22px;
+      font-size: 18px;
       line-height: 26px;
       letter-spacing: -0.1px; } }
 
@@ -5773,6 +5773,10 @@ h5 {
 
   .mobile-button {
     margin-bottom: 20px;
+  }
+
+  .mobile .start-with-self-ocean {
+    transform: scale(1.5) translateX(-10%) translateY(25%);
   }
 }
 
