@@ -11,16 +11,25 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
     }
 
-// MailTo Function Attached to Contact Us buttons that set an email.
-    const contactButtons = document.querySelectorAll('.contactUs');  // Use class instead of ID
+const waitlistButtons = document.querySelectorAll('.waitlist');  // Use class instead of ID
 
-    contactButtons.forEach(function(contactButton) {
-      contactButton.addEventListener('click', function() {
-        const email = 'info@prototypedevshop.com';
-        const subject = "I'd like some more information about your services.";
-        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-      });
+    waitlistButtons.forEach(function(waitlistButton) {
+        waitlistButton.addEventListener('click', function() {
+            const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe3MYd9AB-ldZOuttdLRIAmW1Mjuya7fwdFC7YcD4QF4p4IWA/viewform?usp=sf_link";
+            window.open(formUrl, '_blank');  // Opens the link in a new window
+        });
     });
+
+// Request Info Function Attached to Contact Us buttons that set an email.
+const contactButtons = document.querySelectorAll('.requestInfo');  // Use class instead of ID
+
+contactButtons.forEach(function(contactButton) {
+  contactButton.addEventListener('click', function() {
+    const email = 'contact@startwithself.io';
+    const subject = "I'd like some more information about your services.";
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+  });
+});
 
 
     let fading = false;

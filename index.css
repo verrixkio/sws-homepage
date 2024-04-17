@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #53c1bd;
 }
 
+.quote-grey{
+  color: #848484;
+}
+
 /* Base Styles */
 .button {
   display: flex;
@@ -5780,11 +5784,15 @@ h5 {
   }
 
   .mobile .start-with-self-ocean-island {
-    transform: translateY(25%);
+    transform: scale(1) translateY(55%);
   }
 
   .mobile .start-with-self-mood-analytics {
-    transform: scale(1.5) translateX(-10%) translateY(25%);
+    transform: scale(1.2) translateX(10%) translateY(35%);
+  }
+
+  .mobile .start-with-self-current-focus {
+    transform: scale(1) translateY(50%);
   }
 }
 
