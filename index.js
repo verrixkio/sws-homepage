@@ -20,16 +20,48 @@ const waitlistButtons = document.querySelectorAll('.waitlist');  // Use class in
         });
     });
 
-// Request Info Function Attached to Contact Us buttons that set an email.
-const contactButtons = document.querySelectorAll('.requestInfo');  // Use class instead of ID
+// Select all contact buttons
+const contactButtons = document.querySelectorAll('.requestInfo');
 
-contactButtons.forEach(function(contactButton) {
-  contactButton.addEventListener('click', function() {
-    const email = 'contact@startwithself.io';
-    const subject = "I'd like some more information about your services.";
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-  });
+// Function to handle click event
+function handleContactButtonClick(event) {
+  // Prevent default behavior
+  event.preventDefault();
+  
+  // Email address and subject
+  const email = 'contact@startwithself.io';
+  const subject = "INFO";
+  
+  // Check if the device supports mailto links
+  if (navigator && navigator.share) {
+    // If supported, use navigator.share to open email client
+    navigator.share({
+      title: 'Contact Start with Self',
+      text: subject,
+      url: `mailto:${email}?subject=${encodeURIComponent(subject)}`
+    })
+    .catch(error => {
+      // Handle error, e.g., fallback to manual email composition
+      console.error('Error sharing:', error);
+      fallbackToManualEmail(email, subject);
+    });
+  } else {
+    // If not supported, fallback to manual email composition
+    fallbackToManualEmail(email, subject);
+  }
+}
+
+// Function to fallback to manual email composition
+function fallbackToManualEmail(email, subject) {
+  // Display a message with instructions for manual email composition
+  alert(`Please compose an email to ${email} with the subject: "${subject}"`);
+}
+
+// Attach click event listeners to all contact buttons
+contactButtons.forEach(contactButton => {
+  contactButton.addEventListener('click', handleContactButtonClick);
 });
+
 
 
     let fading = false;
